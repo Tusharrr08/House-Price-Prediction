@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                Bedrooms: <input type="number" name='bedrooms' placeholder="Enter the no of Bedrooms"><br>
+                Bathrooms: <input type="number" name='bathrooms' placeholder="Enter the no of Bathrooms"><br>
+                Stories: <input type="number" name='stories' placeholder="Enter the no of stories"><br>
+                Mainroad: <input type="number" name='mainroad' placeholder="Enter the no of mainroad"><br>
+                Guestroom: <input type="number" name='guestroom' placeholder="Enter no of guestroom"><br>
+                Basement: <input type="number" name='basement' placeholder="Enter no of basement"><br>
+                Hotwaterheating: <input type="number" name='hotwaterheating' placeholder="Enter the no of hotwaterheating"><br>
+                Airconditioning: <input type="number" name='airconditioning' placeholder="Enter the no of airconditioning"><br>
+                Parking: <input type="number" name='parking' placeholder="Enter no of parking"><br>
+                Prefarea: <input type="number" name='prefarea' placeholder="Enter no of prefarea"><br>
+                Furnished: <input type="number" name='Furnished' placeholder="Enter no of Furnished"><br>
+                Semi-Furnished: <input type="number" name='Semi-Furnished' placeholder="Enter no of Semi-Furnished"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> House Price is: {{data}}</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
